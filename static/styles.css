@@ -1,7 +1,97 @@
-.loginForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* General Styles */
+.title{
     justify-content: center;
-    gap: 20px;
+    padding: 30px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #B5C7EB;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chat Room Page */
+.message-box {
+    background: #A4A5F5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    color: #333;
+}
+
+h2 {
+    color: #333;
+}
+
+.messages {
+    background: #9EF0FF;
+    padding: 10px;
+    border-radius: 5px;
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    width: 75%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #E0E0FF;
+}
+
+button {
+    background: #8E70CF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7B5EB0;
+}
+
+/* Login Page */
+.loginForm {
+    background: #A4A5F5;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    color: #333;
+}
+
+.loginForm input {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #E0E0FF;
+}
+
+button[name="join"], button[name="create"] {
+    width: 45%;
+    margin: 5px;
+}
+
+ul {
+    list-style: none;
+    color: red;
+    padding: 0;
 }

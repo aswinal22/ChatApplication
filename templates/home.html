@@ -1,35 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Enter the Chat Room</h2>
-<form method="post" class = "loginForm"> <!--add action attribute to change
-                                        where the data needs to be submitted action = "sent url or route"-->
-    <div>
-        <input
-        type = "text"
-        name = "name"
-        value = "{{name}}"
-        placeholder = "Enter your Name!"
-        />
-    </div>
-    <div class = "join">
-        <input type="text"
-        placeholder="Room Code"
-        name = "code" 
-        value="{{code}}" 
-        />
-    </div>
-    <button type = "submit" name = "join">Join a room</button><!--returns an empty string if the buuton is 
-    pressed || none -- not clicked| and it does'nt require any extra var to store because it self can return the val-->
-    <button type = "submit" name = "create">Create a room</button>
-    {% if error %}
-    <ul>
-        <li>{{error}}</li>
-    </ul>
-    {% endif %}
-
-</form>
-
-
-
+<div class="container">
+    <h2 class="title">ENTER THE CHAT ROOM</h2>
+    <form method="post" class="loginForm"> 
+        <!-- Add action attribute to change where the data needs to be submitted, e.g., action="your_route_url" -->
+        <div class="input-group">
+            <input type="text" name="name" value="{{name}}" placeholder="Enter your Name!" />
+        </div>
+        <div class="input-group">
+            <input type="text" placeholder="Room Code" name="code" value="{{code}}" />
+        </div>
+        <div class="button-group">
+            <button type="submit" name="join">Join a room</button> 
+            <!-- Returns an empty string if the button is pressed || None if not clicked -->
+            <!-- It does not require any extra variable to store because it itself can return the value -->
+            <button type="submit" name="create">Create a room</button>
+        </div>
+        {% if error %}
+        <ul>
+            <li>{{error}}</li>
+        </ul>
+        {% endif %}
+    </form>
+</div>
 {% endblock %}
