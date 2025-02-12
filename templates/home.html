@@ -2,7 +2,8 @@
 
 {% block content %}
 <h2>Enter the Chat Room</h2>
-<form method="post" class = "loginForm">
+<form method="post" class = "loginForm"> <!--add action attribute to change
+                                        where the data needs to be submitted action = "sent url or route"-->
     <div>
         <input
         type = "text"
@@ -14,12 +15,18 @@
     <div class = "join">
         <input type="text"
         placeholder="Room Code"
-        name = "code"
-        value="{{code}}"
+        name = "code" 
+        value="{{code}}" 
         />
     </div>
-    <button type = "submit" name = "join">Join a room</button>
+    <button type = "submit" name = "join">Join a room</button><!--returns an empty string if the buuton is 
+    pressed || none -- not clicked| and it does'nt require any extra var to store because it self can return the val-->
     <button type = "submit" name = "create">Create a room</button>
+    {% if error %}
+    <ul>
+        <li>{{error}}</li>
+    </ul>
+    {% endif %}
 
 </form>
 
