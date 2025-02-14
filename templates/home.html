@@ -9,13 +9,11 @@
             <input type="text" name="name" value="{{name}}" placeholder="Enter your Name!" />
         </div>
         <div class="input-group">
-            <input type="text" placeholder="Room Code" name="code" value="{{code}}" />
+            <input type="text" placeholder="Enter Room Code (if joining)" name="code" value="{{code}}" />
         </div>
         <div class="button-group">
-            <button type="submit" name="join">Join a room</button> 
-            <!-- Returns an empty string if the button is pressed || None if not clicked -->
-            <!-- It does not require any extra variable to store because it itself can return the value -->
-            <button type="submit" name="create">Create a room</button>
+            <button type="submit" name="join" value="1">Join a Room</button>
+            <button type="submit" name="create" value="1">Create a Room</button>
         </div>
         {% if error %}
         <ul>
