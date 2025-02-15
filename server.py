@@ -114,4 +114,4 @@ def message(data):
     send({"name": name, "message": data["message"]}, room=room)
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True)
+    socketio.run(app, debug=False)

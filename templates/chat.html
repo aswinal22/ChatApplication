@@ -10,7 +10,112 @@
         </div>
     </div>
 </div>
+<style>
+    /* Chat Container */
+    .chat-container {
+        max-width: 800px; /* Increased width */
+        margin: 20px auto;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
+    /* Message Box */
+    .message-box {
+        display: flex;
+        flex-direction: column;
+        height: 600px; /* Increased height */
+    }
+
+    .room-title {
+        text-align: center;
+        color: #333;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    /* Messages */
+    .messages {
+        flex: 1;
+        max-height: 500px; /* Increased height */
+        overflow-y: auto;
+        background: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+    /* Ensure messages wrap properly */
+    .message {
+        max-width: 75%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 8px;
+        font-size: 1rem;
+        display: inline-block;
+        word-wrap: break-word; /* Break long words */
+        white-space: pre-wrap; /* Preserve spaces & line breaks */
+        overflow-wrap: break-word; /* Ensure content doesn't overflow */
+    }
+
+    /* Additional fixes to ensure the message box adjusts */
+    .messages {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        max-height: 500px;
+        padding: 10px;
+    }
+
+    .text {
+        padding: 5px;
+        margin: 8px 0;
+        border-radius: 8px;
+        font-size: 1rem;
+        background: #eaf3ff;
+    }
+
+    .text strong {
+        color: #007bff;
+    }
+
+    .muted {
+        display: block;
+        font-size: 0.85rem;
+        color: #666;
+        text-align: right;
+    }
+
+    /* Input Box & Button */
+    .input-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    .message-input {
+        flex: 1;
+        padding: 12px; /* Bigger input */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+
+    .send-button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 20px; /* Bigger button */
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+
+    .send-button:hover {
+        background: #0056b3;
+    }
+</style>
 <script type="text/javascript">
     var socketio = io();
 
